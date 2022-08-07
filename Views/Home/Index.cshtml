@@ -1,8 +1,43 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
+@model IEnumerable<Product>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2> Product List</h2>
+
+<br/>
+
+<table class="table table-sm table-bordered">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>IsApproved</th>
+        <th></th>
+    </tr>
+    </thead>
+    
+    <tbody>
+    @foreach(var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@if (product.IsApproved)
+                {
+                    <span class="badge badge-pill badge-success">Approved</span>
+                }
+                else
+                {
+                    <span class="badge badge-pill badge-danger">Waiting for approval</span>
+                }</td>
+            <td>
+                <a class="btn btn-danger btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@product.Id"></a>
+                Update
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+
+<a class="btn btn-primary" asp-controller="Home" asp-action="Create">
+    Create
+</a>

@@ -20,17 +20,33 @@ namespace BasicFormApp.Controllers
 
         public IActionResult Index()
         {
+            return View(ProductRepository.GetProducts());
+        }
+        
+        [HttpGet]
+        public IActionResult Search(string q)
+        {
+            if(!string.IsNullOrWhiteSpace(q))
+                return View("Index", ProductRepository.GetProducts().Where(i=>i.Name.Contains(q)));
             return View();
         }
 
-        public IActionResult Search()
+        public IActionResult Edit(int id)
         {
             return View();
         }
-
+        
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            ProductRepository.AddProduct(product);
+            return RedirectToAction("Index");
         }
         public IActionResult Privacy()
         {
