@@ -1,0 +1,33 @@
+﻿@model Product
+<h2>Create</h2>
+
+<br/>
+
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control"/>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" class="form-control"/>
+    </div>
+    
+    <div class="form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" asp-for="IsApproved" />
+            Is Approved
+        </label>
+    </div>
+    
+    <input type="submit" value="Submit" class="btn btn-primary" />
+    
+    
+    
+</form>

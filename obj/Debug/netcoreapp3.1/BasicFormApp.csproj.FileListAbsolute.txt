@@ -37,3 +37,5 @@ C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\BasicFormApp.dl
 C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\BasicFormApp.pdb
 C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\BasicFormApp.genruntimeconfig.cache
 C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\BasicFormApp.csproj.CopyComplete
+C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\user\RiderProjects\BasicFormApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Search.cshtml.g.cs

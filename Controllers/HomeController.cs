@@ -23,6 +23,15 @@ namespace BasicFormApp.Controllers
             return View();
         }
 
+        public IActionResult Search()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
